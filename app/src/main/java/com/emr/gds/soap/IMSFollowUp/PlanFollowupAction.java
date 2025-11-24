@@ -92,7 +92,7 @@ public class PlanFollowupAction {
         root.setCenter(createCenterSection());
         root.setBottom(createBottomSection());
 
-        editorStage.setScene(new Scene(root, 1100, 600));
+        editorStage.setScene(new Scene(root, 400, 600));
     }
 
     private VBox createTopSection() {

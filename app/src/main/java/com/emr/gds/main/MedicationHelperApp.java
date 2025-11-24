@@ -120,7 +120,13 @@ public class MedicationHelperApp extends Application {
             btnSave.setDisable(true);
             showInfo("Saved.");
         });
-        btnQuit.setOnAction(e -> Platform.exit());
+//        btnQuit.setOnAction(e -> Platform.exit());
+        btnQuit.setOnAction(e -> {
+            // 이벤트 소스인 버튼의 Scene에서 Stage 참조 얻기
+            Stage stage = (Stage) btnQuit.getScene().getWindow();
+            stage.close();  // 현재 Stage만 닫음
+        });
+
 
         return new ToolBar(
                 btnFind, new Separator(),
