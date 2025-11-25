@@ -3630,3 +3630,53 @@ BUILD SUCCESSFUL in 5s
 7 actionable tasks: 1 executed, 6 up-to-date
 [0;32m[INFO][0m Gradle task 'run' completed successfully!
 [0;32m[INFO][0m Gradle task 'run' completed successfully!
+===========================================================
+===========================================================
+Gradle Project Runner - 2025-11-25 07:31:27
+Gradle Project Runner - 2025-11-25 07:31:27
+Project: /home/ey/git/GDSEMR_ver_0.3
+Project: /home/ey/git/GDSEMR_ver_0.3
+===========================================================
+===========================================================
+[0;32m[INFO][0m Starting Gradle build and run...
+[0;32m[INFO][0m Starting Gradle build and run...
+[0;32m[INFO][0m Check full log at: /home/ey/git/GDSEMR_ver_0.3/run.log
+[0;32m[INFO][0m Check full log at: /home/ey/git/GDSEMR_ver_0.3/run.log
+[0;32m[INFO][0m Executing: ./gradlew run
+[0;32m[INFO][0m Executing: ./gradlew run
+Configuration on demand is an incubating feature.
+Invalid Java installation found at '/usr/lib/jvm/java-21-openjdk-amd64' (Common Linux Locations) auto-detected. It will be re-checked in the next build. This might have performance impact if it keeps failing. Run the 'javaToolchains' task for more details.
+> Task :app:processResources
+> Task :utilities:processResources NO-SOURCE
+> Task :list:compileJava FROM-CACHE
+> Task :list:processResources NO-SOURCE
+> Task :list:classes UP-TO-DATE
+> Task :utilities:compileJava FROM-CACHE
+> Task :list:jar
+> Task :utilities:classes UP-TO-DATE
+> Task :utilities:jar
+
+> Task :app:compileJava
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :app:classes
+> Task :app:run FAILED
+
+[Incubating] Problems report is available at: file:///home/ey/git/GDSEMR_ver_0.3/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:run'.
+> A problem occurred starting process 'command '/usr/lib/jvm/java-25-openjdk-amd64/bin/java''
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to generate a Build Scan (Powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 5s
+7 actionable tasks: 5 executed, 2 from cache
+[0;31m[ERROR][0m Gradle task 'run' failed. See log above.
