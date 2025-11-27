@@ -7,6 +7,14 @@ import com.emr.gds.soap.ChiefComplaintEditor;
 import com.emr.gds.soap.EMRPMH;
 import com.emr.gds.soap.IMSPresentIllness;
 import com.emr.gds.soap.IMSFollowUp.PlanFollowupAction;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.regex.Pattern;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
@@ -15,9 +23,6 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
-
-import java.util.*;
-import java.util.regex.Pattern;
 
 /**
  * Manages the central text areas in the EMR application, providing features like:

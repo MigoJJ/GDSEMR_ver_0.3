@@ -1,34 +1,36 @@
 package com.emr.gds.main;
 
 import com.emr.gds.IttiaApp;
-import com.emr.gds.main.MedicationHelperApp;
-import com.emr.gds.main.ThyroidDisordersApp;
-import com.emr.gds.main.glp1.Glp1SemaglutideMain;
 import com.emr.gds.input.IAITextAreaManager;
-
-import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.VBox;
-import javafx.stage.Modality; // Import Modality
-import javafx.stage.Stage;
-
+import com.emr.gds.main.glp1.Glp1SemaglutideMain;
 import java.sql.Connection;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
+import javafx.application.Platform;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Control;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Separator;
+import javafx.scene.control.ToolBar;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 // Import for KCDDatabaseManagerJavaFX
 import com.emr.gds.main.KCDDatabaseManagerJavaFX;
-import com.emr.gds.meds.Glp1SemaglutidePane;
 
 /**
  * Manages the creation and actions for the top and bottom toolbars of the application.

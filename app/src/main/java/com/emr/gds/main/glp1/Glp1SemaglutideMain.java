@@ -1,7 +1,9 @@
 package com.emr.gds.main.glp1;
 
+import com.emr.gds.input.IAIFxTextAreaManager;
 import com.emr.gds.input.IAIMain;
 import com.emr.gds.input.IAITextAreaManager;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -55,7 +57,7 @@ public class Glp1SemaglutideMain extends Application {
 
                         String assessmentLine = medPane.toAssessmentSummary();
                         if (!assessmentLine.isBlank()) {
-                            manager.appendTextToSection(IAITextAreaManager.AREA_A, assessmentLine + "\n");
+                            manager.appendTextToSection(IAIFxTextAreaManager.AREA_A, assessmentLine + "\n");
                         }
 
                         new Alert(Alert.AlertType.INFORMATION, "Saved to PI> and A> in EMR.").showAndWait();
