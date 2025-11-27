@@ -39,6 +39,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import com.emr.gds.main.medication.MedicationCategory;
+
 import javax.swing.SwingUtilities;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -329,6 +331,15 @@ public class IttiaApp extends Application {
             ChestXrayReviewStage chestPAWindow = new ChestXrayReviewStage(mainStage);
             chestPAWindow.show();
         });
+
+        Button categoryButton = new Button("Category");
+        categoryButton.setOnAction(e -> {
+            try {
+                new MedicationCategory().start(new Stage());
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
         
         // Add buttons to the toolbar
         topBar.getItems().addAll(
@@ -364,7 +375,21 @@ public class IttiaApp extends Application {
      */
     private ToolBar buildBottomPanel() {
         try {
-            return buttonAction.buildBottomBar();
+            ToolBar bottomBar = buttonAction.buildBottomBar();
+            
+            Button categoryButton = new Button("Category");
+            categoryButton.setOnAction(e -> {
+                try {
+                    new MedicationCategory().start(new Stage());
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            });
+            
+            bottomBar.getItems().add(new Separator());
+            bottomBar.getItems().add(categoryButton);
+            
+            return bottomBar;
         } catch (Exception e) {
             System.err.println("Error building bottom panel: " + e.getMessage());
             e.printStackTrace();

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.emr.gds.main.medication.controller.MainController">
+
+    <left>
+        <VBox style="-fx-background-color: #f8f8f8; -fx-padding: 10; -fx-spacing: 10;">
+            <Button text="Back to Menu" onAction="#backToLauncher" maxWidth="1.7976931348623157E308"/>
+            <Separator/>
+            <Label text="Selected Items:" style="-fx-font-weight: bold;"/>
+            <TextArea fx:id="outputTextArea" promptText="Selected medications appear here..." wrapText="true" VBox.vgrow="ALWAYS"/>
+            <Button text="Copy All" onAction="#copyAll" maxWidth="1.7976931348623157E308"/>
+            <Button text="Save to EMR" onAction="#saveToEmr" maxWidth="1.7976931348623157E308"/>
+            <Button text="Clear" onAction="#clearOutput" maxWidth="1.7976931348623157E308"/>
+        </VBox>
+    </left>
+
+    <center>
+        <BorderPane>
+            <top>
+                <ToolBar>
+                    <Button text="Find" onAction="#findMedication"/>
+                    <Separator/>
+                    <Button text="Add" onAction="#addMedication"/>
+                    <Separator/>
+                    <Button text="Quit" onAction="#quitApp"/>
+                </ToolBar>
+            </top>
+            <center>
+                <TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE"/>
+            </center>
+        </BorderPane>
+    </center>
+
+    <right>
+        <VBox fx:id="actionPanel" style="-fx-background-color: #f7f9fc; -fx-border-color: #dfe3eb; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-spacing: 12; -fx-pref-width: 340;">
+            <Label text="Edit / Delete / Save" style="-fx-font-weight: bold;"/>
+            <Label fx:id="selectionLabel" text="No medication selected" wrapText="true" style="-fx-text-fill: #444;"/>
+            <Button fx:id="btnEdit" text="Edit" onAction="#editItem" disable="true" maxWidth="1.7976931348623157E308"/>
+            <Button fx:id="btnDelete" text="Delete" onAction="#deleteItem" disable="true" maxWidth="1.7976931348623157E308"/>
+            <Button fx:id="btnSave" text="Save Changes" onAction="#saveChanges" disable="true" maxWidth="1.7976931348623157E308"/>
+        </VBox>
+    </right>
+</BorderPane>
